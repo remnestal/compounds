@@ -4,6 +4,18 @@
 
 But I don't like to think so I made this program to do that for me.
 
+## How-to
+Combine the datasets and create the lexicon:
+```bash
+$   make            # defaults to all
+```
+Or run them separately:
+```bash
+$   make prepare    # only combine dataset
+$   make divide     # only partition into lexicon
+```
+The combined dictionary ends up in `dump/dictionary.txt` and the partitioned version is created in `dump/lexicon/`
+
 ## Swedish dictionaries
 All dictionaries are drawn from [Nordic Words](http://runeberg.org/words/) where they reside in the public domain as of **2018-03-22**.
 
