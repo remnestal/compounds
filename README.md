@@ -9,6 +9,7 @@ All dictionaries are drawn from [Nordic Words](http://runeberg.org/words/) where
 
 Specifically, the following dictionaries are incorporated:
 * [Svenska](http://runeberg.org/words/fr-svenska.txt) by _Projekt Runeberg_
+* [ss100.txt](http://runeberg.org/words/ss100.txt) by _Lars Aronsson_
 
 ### Encoding
 _ISO-8859-1_, which makes **åäö** behave a little weird in some contexts.
