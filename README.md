@@ -11,6 +11,7 @@ Specifically, the following dictionaries are incorporated:
 * [Svenska](http://runeberg.org/words/fr-svenska.txt) by _Projekt Runeberg_
 * [ss100.txt](http://runeberg.org/words/ss100.txt) by _Lars Aronsson_
 * [ord.niklas.frykholm](http://runeberg.org/words/ord.niklas.frykholm) by _Niklas Frykholm_
+* [ord.stava](http://runeberg.org/words/ord.stava) by _swnet & Niklas Frykholm_
 * [ord.swnet](http://runeberg.org/words/ord.swnet) by _swnet_
 
 ### Encoding
