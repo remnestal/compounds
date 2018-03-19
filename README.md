@@ -14,5 +14,7 @@ Specifically, the following dictionaries are incorporated:
 * [ord.stava](http://runeberg.org/words/ord.stava) by _swnet & Niklas Frykholm_
 * [ord.swnet](http://runeberg.org/words/ord.swnet) by _swnet_
 
+The combined dataset has **306164** entries.
+
 ### Encoding
 _ISO-8859-1_, which makes **åäö** behave a little weird in some contexts.
