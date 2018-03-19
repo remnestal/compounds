@@ -11,4 +11,4 @@ divide:
 
 .PHONY: conquer
 conquer:
-	python conquer.py
+	python3 conquer.py

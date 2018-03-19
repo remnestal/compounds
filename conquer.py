@@ -1,7 +1,11 @@
+#!/usr/bin/env python3
+# encoding=utf8
+import sys
+
 from os import listdir
 import bisect
 
-LEXICON_PATH = 'dump/lexicon/'
+LEXICON_PATH = 'dump/lexicon'
 lexicon = dict()
 result = dict()
 
@@ -17,7 +21,7 @@ for letter in listdir(LEXICON_PATH):
 for letter, partition in lexicon.items():
     for word in partition:
         # the word may have already been discovered as a reversed compund
-        if guess not in result:
+        if word not in result:
 
             # analyse every possible compound subset
             for i in range(1, len(word)):
