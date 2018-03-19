@@ -1,24 +1,23 @@
 #!/bin/bash
 # combine all dictionaries into one with the following properties
 #   - UTF-8 encoded
-#   - does not contain hyphens
-#   - does not contain punctuations
-#   - does not contain diacritics
-#   - trimmed
 #   - lowercase
+#   - trimmed
+#   - does not contain hyphens or punctuations
+#   - does not contain diacritics
 #   - sorted
 #   - unique
 
 mkdir -p dump
 
-cat dictionaries/*              |\
-iconv -f ISO-8859-15 -t UTF-8   |\
-sed -e '/-/d'                   |\
-sed -e '/\./d'                  |\
-sed -e 's/é/e/g' -e 's/â/a/g'   |\
-sed -e 's/à/a/g' -e 's/á/a/g'   |\
-tr -d '[:blank:]'               |\
-tr '[:upper:]' '[:lower:]'      |\
-sort                            |\
-uniq                            \
+cat dictionaries/*                              |\
+iconv -f ISO-8859-15 -t UTF-8                   |\
+tr '[:upper:]' '[:lower:]'                      |\
+tr -d '[:blank:]'                               |\
+sed -e 's/Ö/ö/g'                                |\
+sed -e 's/Ä/ä/g'                                |\
+sed -e 's/Å/å/g'                                |\
+sed -r '/^[abcdefghijklmnopqrstuvwxyzåäö]+$/!d' |\
+sort                                            |\
+uniq                                            \
 > dump/dictionary.txt
