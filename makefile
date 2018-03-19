@@ -1,5 +1,5 @@
 .PHONY: all
-all: prepare divide
+all: prepare divide conquer
 
 .PHONY: prepare
 prepare:
@@ -8,3 +8,7 @@ prepare:
 .PHONY: divide
 divide:
 	bash divide.sh
+
+.PHONY: conquer
+conquer:
+	python conquer.py

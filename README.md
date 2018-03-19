@@ -5,14 +5,15 @@
 But I don't like to think so I made this program to do that for me.
 
 ## How-to
-Combine the datasets and create the lexicon:
+Combine the datasets, create the lexicon and find reversed compound words:
 ```bash
 $   make            # defaults to all
 ```
 Or run them separately:
 ```bash
-$   make prepare    # only combine dataset
-$   make divide     # only partition into lexicon
+$   make prepare    # combine dataset
+$   make divide     # partition into lexicon
+$   make conquer    # find reversed compound words using the partitions
 ```
 The combined dictionary ends up in `dump/dictionary.txt` and the partitioned version is created in `dump/lexicon/`
 
