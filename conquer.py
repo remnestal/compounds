@@ -13,7 +13,7 @@ result = dict()
 for letter in listdir(LEXICON_PATH):
     with open('{}/{}'.format(LEXICON_PATH, letter)) as partition:
         content = partition.readlines()
-        content = [w.strip() for w in content if len(w) > 1]
+        content = [w.strip() for w in content if len(w.strip()) > 1]
         content.sort()
         lexicon[letter] = content
 
@@ -33,5 +33,5 @@ for letter, partition in lexicon.items():
                 if not in_lexicon(head) or not in_lexicon(tail):
                     continue
                 if in_lexicon(reverse):
-                    result[reverse] = (word, reverse)
+                    result[reverse] = (word,reverse)
                     print(result[reverse])
