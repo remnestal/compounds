@@ -11,4 +11,4 @@ divide:
 
 .PHONY: conquer
 conquer:
-	python3 conquer.py
+	python3 conquer.py > dump/compounds.txt
