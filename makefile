@@ -1,5 +1,9 @@
 .PHONY: all
-all: prepare divide conquer
+all: dictionary prepare divide conquer
+
+.PHONY: dictionary
+dictionary:
+	bash dictionary.sh
 
 .PHONY: prepare
 prepare:

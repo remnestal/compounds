@@ -5,17 +5,23 @@
 But I don't like to think for myself so I made this program to do that for me.
 
 ## How-to
-Combine the datasets, create the lexicon and find reversed compound words:
 ```bash
-$   make            # defaults to `make all`
+$   make                # defaults to `make all`
 ```
+This command runs the following operations:
+1. **Download** dictionaries from source
+2. **Combine** and sanitize the data into a complete dataset
+3. **Divide** the dataset into partitions
+4. **Find** reversed compound words
+
 Or run them separately:
 ```bash
-$   make prepare    # build the combined dataset from source
-$   make divide     # divide the dataset into partitions for each letter
-$   make conquer    # find reversed compound words using the partitions
+$   make dictionary     # download the dictionaries from source
+$   make prepare        # build the combined dataset from source
+$   make divide         # divide the dataset into partitions for each letter
+$   make conquer        # find reversed compound words using the partitions
 ```
-The combined dictionary ends up in `dump/dictionary.txt` and the partitioned version is created in `dump/lexicon/`
+The combined dictionary ends up in `dump/dictionary.txt` and the partitioned version is created in `dump/lexicon/`. The list of possible reversed compound words are piped into `dump/compounds.txt`.
 
 ## Swedish dictionaries
 All dictionaries are drawn from [Nordic Words](http://runeberg.org/words/) where they reside in the public domain as of **2018-03-19**.
